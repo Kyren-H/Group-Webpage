@@ -1,90 +1,158 @@
+
 /* General page styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    background-color: #eef2ff;
+    color: #252b42;
     margin: 0;
     padding: 0;
 }
 
 /* Header section styling */
 header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
+    background: linear-gradient(135deg, #141e30, #243b65);
+    color: white;
+    padding: 30px 15px;
     text-align: center;
 }
 
-/* Styling for team logo image */
-.team-logo {
-    width: 150px; /* Adjust the size as needed */
-    margin-top: 10px;
+header h1 {
+    font-size: 36px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
 }
 
-/* Menu button styling */
-header nav {
+/* Team logo */
+.team-logo {
+    width: 150px;
     margin-top: 10px;
+    border-radius: 12px;
+}
+
+/* Navigation */
+header nav {
+    margin-top: 20px;
 }
 
 header nav button {
-    background: #007BFF;
+    background: #7065e9;
     color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    padding: 12px 20px;
+    border-radius: 8px;
     cursor: pointer;
-    margin: 0 5px;
+    margin: 5px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 header nav button:hover {
-    background: #0056b3;
+    background: #5346d4;
+    transform: translateY(-3px);
 }
 
-/* Flex container for team bios and vision sections */
+/* Team layout */
 .container {
-    width: 80%;
-    margin: 20px auto;
+    width: 85%;
+    max-width: 1200px;
+    margin: 30px auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
 }
 
-/* Card styling for individual team bios */
+/* Team bio cards */
 .card {
     background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    padding: 20px;
-    flex: 1 1 calc(30% - 40px);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    flex: 1 1 250px;
+    max-width: 350px;
     text-align: center;
-    transition: transform 0.2s;
+    border-top: 5px solid #7065e9;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
+/* Headings */
 h2 {
-    margin: 0 0 10px;
+    color: #283b75;
+    font-size: 24px;
+    margin-bottom: 15px;
 }
 
-/* Initially hide bio details */
+h3 {
+    color: #7065e9;
+    font-size: 19px;
+}
+
+/* Bio details */
 .bio {
     display: none;
-    margin-top: 10px;
-    color: #555;
+    margin-top: 15px;
+    color: #505a70;
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: left;
 }
 
-/* Button styling */
+/* Mission / vision statement */
+.mission, .vision {
+    background: #e4e6ff;
+    border-left: 5px solid #7065e9;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+/* General buttons */
 button {
-    background: #007BFF;
+    background: #7065e9;
     color: white;
     border: none;
     padding: 10px 15px;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background 0.3s;
 }
 
 button:hover {
-    background: #0056b3;
+    background: #5346d4;
+}
+
+/* Moodboard images */
+.moodboard img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.moodboard img:hover {
+    transform: scale(1.08);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
 }
